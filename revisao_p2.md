@@ -92,3 +92,11 @@ Vale destacar que esta confição não é suficiente, ou seja, a recíproca não
 - Também é possível provar que um grafo não é hamiltoniano utilizando contradição:
 Assumindo por contradição que existe um circuito contendo todos os vértices, e mostrando que isso contradiz alguma propriedade do grafo original.
 - Um caminho hamiltoniano é um caminho que contém todos os vértices, mas não começa e termina no mesmo vértice.
+
+## Planaridade
+
+- $G$ é planar se ele pode ser desenhado no plano sem cruzamento de arestas.
+- $K_5$ e $K_{3,3}$ são não planares.
+- Uma subdivisão de um grafo é obtido trocando uma aresta por um caminho ligando os extremos. Ou seja, inserindo vértices nas arestas do grafo.
+- $G$ é planar $\iff$ toda subdivisão de $G$ é planar.
+- Teorema de Kuratowski: todo grafo não planar contém uma subdivisão do $K_5$ ou $K_{3,3}$
