@@ -74,3 +74,21 @@ Ou seja:
 1. Encontre a $m$-upla de pares de vértices com a menor soma possível, onde $m = \frac{n}{2}$. As arestas da $m$-upla não podem ser adjacentes, ou seja, não pode haver vértices repetidos.
 1. No grafo original $G$, duplique as arestas que ligam os vértices escolhidos na $m$-upla.
 1. Execute o algoritmo de Fleury no grafo resultante.
+
+## Grafos Hamiltonianos
+
+- Um circuito (passeio que começa e termina no mesmo vértice, sem repetição de vértice) hamiltoniano, é um circuito que contém todos os vértices.
+- Um grafo é hamiltoniano se ele contém um circuito hamiltoniano.
+- Grafos com vértice de corte não podem ser hamiltonianos.
+
+Intuição: o circuito começa em uma das "componentes" ligadas a $v$. Para chegar na outra componente, o circuito utiliza o vértice $v$, o que torna impossível retornar a component inicial para fechar o circuito, sem repetir o vértice $v$.
+
+Generalização: Se existe conjunto não vazio $S \subseteq V(G)$, tal que $w(G-S) > |S|$, $G$ não é hamiltoniano. Ou seja, se existe um conjunto de $n$ vértices de corte, cuja remoção faz com que o número de componentes do grafo resultante seja maior que $n$, $G$ não é hamiltoniano.
+
+Vale destacar que esta confição não é suficiente, ou seja, a recíproca não é verdadeira.
+
+- Seja $G$ simples com $n$ vértices. Se existem vértices $u$ e $v$ não adjacentes tal que $d(u) + d(v) \geq n$, entao $G$ é hamiltoniano $\iff$ $G + (u,v)$ é hamiltoniano. Ou seja, se existir par de vértices não adjacentes cuja soma dos graus seja maior que o número de vértices, ao adicionar uma aresta ligando esse par, o grafo resultante mantém a propriedade de ser hamiltoniano ou não.
+- Se $G$ é simples com $n \geq 3$ vértices, e $\delta \geq \frac{n}{2}$, então $G$ é hamiltoniano.
+- Também é possível provar que um grafo não é hamiltoniano utilizando contradição:
+Assumindo por contradição que existe um circuito contendo todos os vértices, e mostrando que isso contradiz alguma propriedade do grafo original.
+- Um caminho hamiltoniano é um caminho que contém todos os vértices, mas não começa e termina no mesmo vértice.
