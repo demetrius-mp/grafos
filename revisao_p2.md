@@ -100,3 +100,8 @@ Assumindo por contradição que existe um circuito contendo todos os vértices, 
 - Uma subdivisão de um grafo é obtido trocando uma aresta por um caminho ligando os extremos. Ou seja, inserindo vértices nas arestas do grafo.
 - $G$ é planar $\iff$ toda subdivisão de $G$ é planar.
 - Teorema de Kuratowski: todo grafo não planar contém uma subdivisão do $K_5$ ou $K_{3,3}$
+- Fórmula de euler: $v - a + f = 2$
+- O grau de uma face $f$, denotado por $d(f)$, é o número de arestas que limitam a face $f$ (arestas de cortes são contadas 2 vezes). Ou seja, $\sum{d(f)} = 2a$
+- Combinando os 2 resultados anteriores, temos o seguinte: $a(G) \leq 3v(G) - 6$.
+- Se $G$ é planar e simples, então $\delta \leq 5$.
+- Com isso, é possível utilizar contradição para, provar que alguns grafos são não planares, utilizando o resultado do limite superior do número de arestas, ou do grau mínimo.
