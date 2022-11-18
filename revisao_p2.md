@@ -105,3 +105,16 @@ Assumindo por contradição que existe um circuito contendo todos os vértices, 
 - Combinando os 2 resultados anteriores, temos o seguinte: $a(G) \leq 3v(G) - 6$.
 - Se $G$ é planar e simples, então $\delta \leq 5$.
 - Com isso, é possível utilizar contradição para, provar que alguns grafos são não planares, utilizando o resultado do limite superior do número de arestas, ou do grau mínimo.
+
+## Emparelhamento
+
+- Um emparelhamento $M$ é um subconjunto de arestas não adjacentes duas a duas.
+- $M$ é máximo se não existe outro emparelhamento $M'$ tal que $|M| < |M'|$, ou seja, com mais arestas do que $M$.
+- $M$ é maximal se não existe outro emparelhamento $M'$ tal que $M \subseteq M'$, ou seja, que contenha $M$
+- Um vértice $v$ é coberto por $M$ se alguma aresta de $M$ incide em $v$
+- Um emparelhamento é perfeito se suas arestas cobrem todos os vértices do grafo.
+- Todo emparelhamento perfeito é maximo e maximal.
+- Se um grafo $G$ possui emparelhamento perfeito, então $G$ possui um número par de vértices.
+- A diferença simétrica entre 2 emparelhamentos perfeitos retorna uma coleção de circuitos.
+- Seja $M$ um emparelhamento em um grafo $G$. Um caminho $M$-alternado é um caminho cujas arestas estão alternadamente em $M$, e $E(G) \setminus M$, ou seja, em $M$, e fora de $M$.
+- Um caminho $M$-aumentante é um caminho $M$-alternado cujos vértices de origem e término não são cobertos por $M$.
